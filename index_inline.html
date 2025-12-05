@@ -862,15 +862,11 @@
       requestAnimationFrame(placeLegendNoOverlap);
     }, true);
     
-     // Send scroll events to parent
-  window.addEventListener("scroll", () => {
-    const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-    parent.postMessage({ type: "iframeScroll", scrollTop }, "*");
-  });
 
 
     
   </script>
 </body>
 </html>
+
 
