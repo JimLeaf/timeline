@@ -8,7 +8,7 @@ st.components.v1.html(html, height=6150, scrolling=True)
 
 st.markdown("""
 <script>
-const iframe = document.querySelector("iframe");
+const iframe = document.querySelector("iframe .stIFrame");
 window.addEventListener("scroll", () => {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   if (iframe && iframe.contentWindow) {
