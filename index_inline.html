@@ -862,15 +862,14 @@
       requestAnimationFrame(placeLegendNoOverlap);
     }, true);
     
-// Listen for scroll messages from parent Streamlit app
   window.addEventListener("message", (event) => {
     if (event.data.type === "parentScroll") {
       const scrollTop = event.data.scrollTop;
       const legend = document.getElementById("legend");
       if (legend) {
-        // Adjust legend position based on parent scroll
+        // Adjust legend position relative to parent scroll
         legend.style.position = "absolute";
-        legend.style.top = (scrollTop + 100) + "px"; // offset from top
+        legend.style.top = (scrollTop + 100) + "px"; // keep 100px offset
       }
     }
   });
@@ -879,6 +878,7 @@
   </script>
 </body>
 </html>
+
 
 
 
