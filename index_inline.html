@@ -874,20 +874,11 @@
     }
   });
 
-    window.addEventListener("message", (event) => {
-  if (event.data.type === "parentScroll") {
-    const scrollTop = event.data.scrollTop;
-    const legend = document.getElementById("legend");
-    if (legend) {
-      legend.style.position = "absolute";
-      legend.style.top = (scrollTop + 100) + "px";
-    }
-  }
-});
-    
+
   </script>
 </body>
 </html>
+
 
 
 
