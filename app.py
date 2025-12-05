@@ -1,16 +1,15 @@
 import streamlit as st
-st.set_page_config(layout="wide")
 
-with open("index_inline.html", "r", encoding="utf-8") as f:
-    html = f.read()
+# Render your timeline iframe
+st.components.v1.html(open("index_inline.html").read(), height=6150, scrolling=False)
 
-st.components.v1.html(html, height=6150, scrolling=False)
-
-import streamlit as st
-
+# Inject JS to send parent scroll events into the iframe
 st.markdown("""
 <script>
-  const iframe = document.querySelector("iframe"); // adjust selector if needed
+  // Find the first iframe rendered by Streamlit
+  const iframe = document.querySelector("iframe");
+
+  // Listen for parent page scroll
   window.addEventListener("scroll", () => {
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     if (iframe && iframe.contentWindow) {
