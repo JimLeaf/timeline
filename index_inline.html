@@ -281,17 +281,19 @@
     .rect-green  { background-color: #2ecc71; }
 
     .timeline-card {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 10;
-      width: 175px;
-      border-radius: 10px;
-      background: #ffffff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      overflow: hidden;
-      transition: top 0.4s ease;
-    }
+    position: fixed;       
+    top: 80px;              
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;           
+    width: 175px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    overflow: hidden;
+    transition: top 0.4s ease;
+}
+
 
     .header-bar {
       background-color: #007BFF;
@@ -864,3 +866,4 @@
   </script>
 </body>
 </html>
+
