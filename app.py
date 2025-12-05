@@ -1,13 +1,14 @@
 import streamlit as st
 
-with open("index_inline.html", "r", encoding="utf-8") as f:
-    html = f.read()
+# Read your timeline HTML file
+html_code = open("index_inline.html").read()
 
-st.components.v1.html(html, height=6150, scrolling=False)
-
-
-
-
+# Render it full width
+st.components.v1.html(
+    html_code,
+    height=6150,       # adjust height as needed
+    scrolling=False
+)
 
 
 
