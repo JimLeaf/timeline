@@ -14,6 +14,9 @@
     }
 
     .timeline-wrapper {
+      max-height: 4000px;     /* adjust to control how much is visible */
+      overflow-y: auto;       /* force vertical scrollbar inside iframe */
+      padding-right: 10px;    /* space so scrollbar doesn’t overlap content */
       position: relative;
       width: 100%;
       overflow: hidden;
@@ -878,6 +881,7 @@
   </script>
 </body>
 </html>
+
 
 
 
