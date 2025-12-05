@@ -10,6 +10,14 @@ st.components.v1.html(
     scrolling=False
 )
 
+st.markdown("""
+<style>
+iframe {
+    width: 100% !important;   /* force iframe to span full width */
+}
+</style>
+""", unsafe_allow_html=True)
+
 
 
 
