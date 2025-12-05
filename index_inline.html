@@ -864,6 +864,7 @@
     
   window.addEventListener("message", (event) => {
   if (event.data && event.data.type === "parentScroll") {
+	console.log('event hear in scroll');
     const scrollTop = event.data.scrollTop;
     const legend = document.getElementById("legend");
     if (legend) {
